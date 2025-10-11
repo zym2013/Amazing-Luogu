@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Amazing Luogu
-// @version      0.3.0
+// @version      0.3.1
 // @description  Amazing Luogu with Chat Markdown, Problem Colors, Cover Removal, Problem Jumper, Send PM Anywhere, Save Station Jumper, and More!
 // @match        *://www.luogu.com.cn/*
 // @match        *://www.luogu.com/*
