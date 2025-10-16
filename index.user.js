@@ -16,7 +16,6 @@
 // @grant        GM_deleteValue
 // @grant        GM_setClipboard
 // @grant        GM_addStyle
-// @license      MIT
 // @require      https://cdn.jsdmirror.com/npm/marked@4.0.0/marked.min.js
 // @require      https://cdn.jsdmirror.com/npm/dompurify@2.3.3/dist/purify.min.js
 // @require      https://cdn.jsdmirror.com/npm/katex@0.16.9/dist/katex.min.js
