@@ -11,9 +11,6 @@
 // @match        *://www.lglg.top/*
 // @icon         https://cdn.luogu.com.cn/upload/usericon/3.png
 // @grant        GM_addStyle
-// @grant        GM_setValue
-// @grant        GM_getValue
-// @grant        GM_deleteValue
 // ==/UserScript==
 
 (function () {
@@ -37,48 +34,48 @@
 	// 至于为什么有 GM_getValue，预留的~
 	let settings = {
 		// 隐藏私信
-		"hideChat": GM_getValue("hideChat", true),
+		"hideChat": true,
 		// 隐藏消息
-		"hideNotification": GM_getValue("hideNotification", true),
+		"hideNotification": true,
 		// 隐藏专栏
-		"hideArticle": GM_getValue("hideArticle", true),
+		"hideArticle": true,
 		// 隐藏剪贴板
-		"hidePaste": GM_getValue("hidePaste", true),
+		"hidePaste": true,
 		// 隐藏题解
-		"hideSolution": GM_getValue("hideSolution", true),
+		"hideSolution": true,
 		// 隐藏比赛
-		"hideContest": GM_getValue("hideContest", true),
+		"hideContest": true,
 		// 隐藏用户主页、设置
-		"hideUser": GM_getValue("hideUser", true),
+		"hideUser": true,
 		// 隐藏工单
-		"hideTicket": GM_getValue("hideTicket", true),
+		"hideTicket": true,
 		// 隐藏帮助中心
-		"hideHelp": GM_getValue("hideHelp", true),
+		"hideHelp": true,
 		// 隐藏页脚多余部分
-		"hideFooter": GM_getValue("hideFooter", true),
+		"hideFooter": true,
 		// 隐藏首页部分内容
-		"hideHome": GM_getValue("hideHome", true),
+		"hideHome": true,
 		// 隐藏广告但不隐藏运势
-		"hideAD": GM_getValue("hideAD", true),
+		"hideAD": true,
 		// 隐藏广告与运势
-		"hidePunchAndAd": GM_getValue("hidePunchAndAd", false),
+		"hidePunchAndAd": false,
 		// 隐藏讨论
-		"hidediscuss": GM_getValue("hidediscuss", true),
+		"hidediscuss": true,
 		// 隐藏友情链接
-		"hideFriendLinks": GM_getValue("hideFriendLinks", true),
+		"hideFriendLinks": true,
 		// 隐藏团队
-		"hideTeam": GM_getValue("hideTeam", true),
+		"hideTeam": true,
 		// 隐藏标签
-		"hideTag": GM_getValue("hideTag", true),
+		"hideTag": true,
 		// 隐藏主题商店
-		"hideThemeList": GM_getValue("hideThemeList", true),
+		"hideThemeList": true,
 		// 隐藏图床
-		"hideImageHosting": GM_getValue("hideImageHosting", true),
+		"hideImageHosting": true,
 		// 隐藏排名
-		"hideRank": GM_getValue("hideRank", true),
-		"hideRank2": GM_getValue("hideRank", true), // 这个别管
+		"hideRank": true,
+		"hideRank2": true, // 这个别管
 		// 隐藏桃片
-		"hideJudgement": GM_getValue("hideJudgement", true),
+		"hideJudgement": true,
 	}
 
 	settings.hideRank2 = settings.hideRank;
@@ -384,7 +381,7 @@
 		document.body.appendChild(newdiv);
 		const setIntervaldiv = setInterval(() => {
 			cnt--;
-			if (cnt > 0) newcount.textContent = `页面关闭倒计时：${cnt}秒`;
+			if (cnt > 0) newcount.textContent = `页面关闭倒计时：${cnt} 秒`;
 			else {
 				newcount.textContent = '即将关闭……';
 				clearInterval(setIntervaldiv);
