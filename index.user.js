@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Amazing Luogu
 // @namespace    https://zym2013.github.io/
-// @version      0.6.21
+// @version      0.6.3
 // @description  Amazing Luogu with Chat Markdown, Problem Colors, Cover Removal, Problem Jumper, Save Station Jumper, and More!
 // @author       zhangyimin12345
 // @match        *://www.luogu.com.cn/*
