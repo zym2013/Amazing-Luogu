@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Luogu Renders Emojis
 // @namespace    zym2013
-// @version      0.1.0
+// @version      0.1.1
 // @description  为洛谷渲染表情包
 // @author       zym2013
 // @match        *://*.luogu.com.cn/*
@@ -12,7 +12,7 @@
 // @connect      cdn.jsdmirror.com
 // @connect      bgithub.xyz
 // @connect      raw.bgithub.xyz
-// @connect      raw.githubusercontent.com
+// @connect      raw.bgithub.xyz
 // @connect      cdn.jsdelivr.net
 // @connect      kr2-proxy.gitwarp.com
 // @connect      jp-proxy.gitwarp.com
