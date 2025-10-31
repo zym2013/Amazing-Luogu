@@ -14,7 +14,7 @@
 // @connect      cdn.jsdmirror.com
 // @connect      bgithub.xyz
 // @connect      raw.bgithub.xyz
-// @connect      raw.githubusercontent.com
+// @connect      raw.bgithub.xyz
 // @connect      cdn.jsdelivr.net
 // @connect      kr2-proxy.gitwarp.com
 // @connect      jp-proxy.gitwarp.com
@@ -24,6 +24,7 @@
 // @connect      jp1-proxy.gitwarp.com
 // @connect      gh.halonice.com
 // @connect      hk-yd-proxy.gitwarp.com
+// @connect      zym2013.dpdns.org
 // @grant        GM_xmlhttpRequest
 // @grant        GM_getValue
 // @grant        GM_setValue
