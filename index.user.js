@@ -14,7 +14,7 @@
 // @connect      cdn.jsdmirror.com
 // @connect      bgithub.xyz
 // @connect      raw.bgithub.xyz
-// @connect      raw.bgithub.xyz
+// @connect      raw.githubusercontent.com
 // @connect      cdn.jsdelivr.net
 // @connect      kr2-proxy.gitwarp.com
 // @connect      jp-proxy.gitwarp.com
