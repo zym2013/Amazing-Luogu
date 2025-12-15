@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Amazing Luogu
 // @namespace    https://zym2013.dpdns.org/
-// @version      0.7.0
+// @version      0.7.1
 // @description  Amazing Luogu with Chat Markdown, Problem Colors, Cover Removal, Problem Jumper, Save Station Jumper, and More!
 // @author       zhangyimin12345
 // @icon         https://cdn.luogu.com.cn/upload/usericon/3.png
@@ -16,7 +16,7 @@
 // @connect      cdn.jsdmirror.com
 // @connect      bgithub.xyz
 // @connect      raw.bgithub.xyz
-// @connect      raw.githubusercontent.com
+// @connect      raw.bgithub.xyz
 // @connect      cdn.jsdelivr.net
 // @connect      kr2-proxy.gitwarp.com
 // @connect      jp-proxy.gitwarp.com
