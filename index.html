@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amazing Luogu 下载与安装</title>
+    <link rel="stylesheet" href="https://cdn.jsdmirror.com/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Mono:wght@300;400&display=swap"
+        rel="stylesheet">
+    <style>
+        :root,
+        .light-mode {
+            --primary-color: #4361ee;
+            --secondary-color: #3a0ca3;
+            --success-color: #4cc9f0;
+            --danger-color: #f72585;
+            --warning-color: #f8961e;
+            --light-color: #f8f9fa;
+            --dark-color: #212529;
+            --card-bg: #ffffff;
+            --body-bg: #f5f7ff;
+            --border-color: #e0e4f0;
+            --text-primary: #2d3748;
+            --text-secondary: #718096;
+            --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --radius: 12px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--body-bg);
+            color: var(--text-primary);
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+            background-image:
+                radial-gradient(circle at 10% 20%, rgba(91, 135, 255, 0.05) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(244, 114, 182, 0.05) 0%, transparent 20%);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-top: 20px;
+            animation: fadeInDown 0.8s ease;
+        }
+
+        .logo {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            box-shadow: var(--shadow);
+        }
+
+        .logo i {
+            font-size: 36px;
+            color: white;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 30px;
+            margin-bottom: 30px;
+            transition: var(--transition);
+            border: 1px solid var(--border-color);
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .card-header i {
+            font-size: 24px;
+            margin-right: 12px;
+            color: var(--primary-color);
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .progress-container {
+            margin: 30px 0;
+        }
+
+        .progress-bar {
+            height: 10px;
+            background-color: #e2e8f0;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary-color), var(--success-color));
+            border-radius: 5px;
+            width: 0;
+            transition: width 1.5s ease;
+        }
+
+        .progress-text {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .source-item {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            background-color: #f8fafc;
+            transition: var(--transition);
+            border-left: 4px solid transparent;
+            animation: fadeInRight 0.5s ease;
+            animation-fill-mode: both;
+        }
+
+        .source-item:hover {
+            background-color: #edf2f7;
+            transform: translateX(5px);
+        }
+
+        .source-item.success {
+            border-left-color: var(--success-color);
+        }
+
+        .source-item.error {
+            border-left-color: var(--danger-color);
+        }
+
+        .source-icon {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            border-radius: 8px;
+            margin-right: 15px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .source-icon i {
+            font-size: 18px;
+        }
+
+        .source-icon.success i {
+            color: var(--success-color);
+        }
+
+        .source-icon.error i {
+            color: var(--danger-color);
+        }
+
+        .source-info {
+            flex: 1;
+        }
+
+        .source-name {
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .source-status {
+            font-size: 0.9rem;
+            font-family: 'Roboto Mono', monospace;
+        }
+
+        .source-status.success {
+            color: var(--success-color);
+        }
+
+        .source-status.error {
+            color: var(--danger-color);
+        }
+
+        .source-duration {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            background-color: var(--body-bg);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-weight: 500;
+        }
+
+        .result-card {
+            text-align: center;
+            animation: pulse 2s infinite;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .version-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            font-size: 2rem;
+            font-weight: 700;
+            padding: 15px 30px;
+            border-radius: var(--radius);
+            margin: 20px 0;
+            box-shadow: var(--shadow);
+            animation: bounce 1s ease;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--success-color), #2a9d8f);
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 600;
+            padding: 18px 36px;
+            border-radius: 50px;
+            text-decoration: none;
+            margin: 20px 0;
+            transition: var(--transition);
+            box-shadow: 0 10px 20px rgba(76, 201, 240, 0.3);
+            animation: pulse 2s infinite;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 25px rgba(76, 201, 240, 0.4);
+            color: white;
+        }
+
+        .download-btn i {
+            margin-right: 10px;
+            font-size: 1.4rem;
+        }
+
+        .fastest-source {
+            background-color: #e8f4fc;
+            border-radius: var(--radius);
+            padding: 20px;
+            margin: 25px 0;
+            border: 2px solid var(--success-color);
+        }
+
+        .fastest-source-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+
+        .fastest-source-header i {
+            font-size: 24px;
+            color: var(--success-color);
+            margin-right: 10px;
+        }
+
+        .details {
+            margin-top: 30px;
+        }
+
+        .details summary {
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--primary-color);
+            cursor: pointer;
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .details summary i {
+            margin-right: 10px;
+            transition: var(--transition);
+        }
+
+        .details[open] summary i {
+            transform: rotate(90deg);
+        }
+
+        .details-content {
+            padding: 20px;
+            background-color: #f8fafc;
+            border-radius: var(--radius);
+            margin-top: 15px;
+            overflow-x: auto;
+        }
+
+        pre {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.85rem;
+            padding: 20px;
+            background-color: #1e293b;
+            color: #e2e8f0;
+            border-radius: 8px;
+            overflow-x: auto;
+            text-align: left;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 30px;
+            gap: 15px;
+        }
+
+        .stat-box {
+            flex: 1;
+            min-width: 200px;
+            background-color: white;
+            border-radius: var(--radius);
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+        }
+
+        .stat-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 10px 0;
+        }
+
+        .stat-value.success {
+            color: var(--success-color);
+        }
+
+        .stat-value.error {
+            color: var(--danger-color);
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            color: var(--text-secondary);
+        }
+
+        .stat-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(76, 201, 240, 0.4);
+            }
+
+            70% {
+                box-shadow: 0 0 0 10px rgba(76, 201, 240, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(76, 201, 240, 0);
+            }
+        }
+
+        @keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateY(0);
+            }
+
+            40% {
+                transform: translateY(-10px);
+            }
+
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+
+        @keyframes progress {
+            from {
+                width: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .card {
+                padding: 20px;
+            }
+
+            .source-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .source-icon {
+                margin-bottom: 10px;
+            }
+
+            .source-duration {
+                margin-top: 10px;
+                align-self: flex-end;
+            }
+
+            .stats {
+                flex-direction: column;
+            }
+        }
+    </style>
+    <style>
+        .dark-mode {
+            --card-bg: #1e293b;
+            --body-bg: #0f172a;
+            --border-color: #334155;
+            --text-primary: #e2e8f0;
+            --text-secondary: #94a3b8;
+            --secondary-color: #9465ff;
+            --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+        }
+
+        body.dark-mode {
+            background-color: var(--body-bg);
+            background-image:
+                radial-gradient(circle at 10% 20%, rgba(91, 135, 255, 0.03) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(244, 114, 182, 0.03) 0%, transparent 20%);
+            color: var(--text-primary);
+        }
+
+        .dark-mode .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+        }
+
+        .dark-mode .source-item {
+            background-color: #1e293b;
+        }
+
+        .dark-mode .source-item:hover {
+            background-color: #334155;
+        }
+
+        .dark-mode .source-icon {
+            background-color: #334155;
+        }
+
+        .dark-mode .stat-box {
+            background-color: #1e293b;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .dark-mode pre {
+            background-color: #0f172a;
+            color: #cbd5e1;
+        }
+
+        .dark-mode .download-btn:hover {
+            box-shadow: 0 15px 25px rgba(76, 201, 240, 0.3);
+        }
+
+        .dark-mode .fastest-source {
+            background-color: #1e293b;
+            border-color: var(--success-color);
+        }
+
+        .dark-mode footer {
+            border-top-color: var(--border-color);
+            color: var(--text-secondary);
+        }
+
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: white;
+            border: none;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            color: #4361ee;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .dark-mode .theme-toggle {
+            background: #1e293b;
+            color: #f8961e;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .theme-toggle:hover {
+            transform: rotate(30deg) scale(1.1);
+        }
+
+        .dark-mode .theme-toggle:hover {
+            transform: rotate(-30deg) scale(1.1);
+        }
+
+        .dark-mode h1 {
+            background: linear-gradient(135deg, #64b5f6, #8e94f2);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="theme-toggle" id="themeToggle" aria-label="切换主题">
+        <i class="fas fa-sun"></i>
+    </button>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-search"></i>
+            </div>
+            <h1>Amazing Luogu 下载与安装</h1>
+            <p class="subtitle">正在检查所有镜像源的代码版本，为您找到最新、最快的安装源。</p>
+        </header>
+        <div class="card">
+            <div class="card-header">
+                <i class="fas fa-satellite-dish"></i>
+                <div class="card-title">正在检测版本源...</div>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <div class="progress-text">
+                    <span>检测进度</span>
+                    <span id="progressText">0%</span>
+                </div>
+            </div>
+            <div id="log"></div>
+        </div>
+        <div class="card" id="resultCard" style="display: none;">
+            <div class="card-header">
+                <i class="fas fa-check-circle"></i>
+                <h3 class="card-title">检测完成</h3>
+            </div>
+            <div id="result"></div>
+        </div>
+        <div class="stats" id="stats" style="display: none;"></div>
+        <footer>
+            <p>Amazing Luogu 下载与安装 &copy; 2025 | 使用 jsDmirror CDN 和 Font Awesome 图标</p>
+            <p style="margin-top: 5px; font-size: 0.8rem;">本工具仅用于检测最新版本，是否安装脚本请用户自行决定</p>
+        </footer>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggleBtn = document.getElementById('themeToggle');
+            const body = document.body;
+            const getPreferredTheme = () => {
+                const saved = localStorage.getItem('theme');
+                if (saved) return saved;
+                return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            };
+            const applyTheme = (theme) => {
+                body.classList.remove('light-mode', 'dark-mode');
+                if (theme === 'dark') {
+                    body.classList.add('dark-mode');
+                    localStorage.setItem('theme', 'dark');
+                    toggleBtn.innerHTML = '<i class="fas fa-moon"></i>';
+                } else {
+                    body.classList.add('light-mode');
+                    localStorage.setItem('theme', 'light');
+                    toggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
+                }
+            };
+            const initialTheme = getPreferredTheme();
+            body.classList.add(initialTheme === 'dark' ? 'dark-mode' : 'light-mode');
+            applyTheme(initialTheme);
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+                if (!localStorage.getItem('theme')) {
+                    applyTheme(e.matches ? 'dark' : 'light');
+                }
+            });
+            toggleBtn.addEventListener('click', () => {
+                const current = body.classList.contains('dark-mode') ? 'dark' : 'light';
+                applyTheme(current === 'dark' ? 'light' : 'dark');
+            });
+        });
+    </script>
+    <script>
+        const sources = [
+            {
+                name: "GitHub Raw Mirror 1",
+                versionUrl: "https://raw.bgithub.xyz/zym2013/Amazing-Luogu/refs/heads/main/versions.json",
+                downloadUrl: "https://bgithub.xyz/zym2013/Amazing-Luogu/raw/refs/heads/main/index.user.js"
+            },
+            {
+                name: "GitHub Raw Mirror 2",
+                versionUrl: "http://kr2-proxy.gitwarp.com:9980/https://raw.githubusercontent.com/zym2013/Amazing-Luogu/refs/heads/main/versions.json",
+                downloadUrl: "http://kr2-proxy.gitwarp.com:9980/https://raw.githubusercontent.com/zym2013/Amazing-Luogu/refs/heads/main/index.user.js"
+            },
+            {
+                name: "GitHub Raw Mirror 3",
+                versionUrl: "http://jp-proxy.gitwarp.com:3000/https://raw.githubusercontent.com/zym2013/Amazing-Luogu/refs/heads/main/versions.json",
+                downloadUrl: "http://jp-proxy.gitwarp.com:3000/https://raw.githubusercontent.com/zym2013/Amazing-Luogu/refs/heads/main/index.user.js"
+            },
+            {
+                name: "GitHub Raw Mirror 4",
+                versionUrl: "http://gh.catmak.name/https://raw.githubusercontent.com/zym2013/Amazing-Luogu/refs/heads/main/versions.json",
+                downloadUrl: "http://gh.catmak.name/https://raw.githubusercontent.com/zym2013/Amazing-Luogu/refs/heads/main/index.user.js"
+            },
+            {
+                name: "GitHub Raw Mirror 5",
+                versionUrl: "http://kr1-proxy.gitwarp.com:8081/https://raw.githubusercontent.com/zym2013/Amazing-Luogu/refs/heads/main/versions.json",
+                downloadUrl: "http://kr1-proxy.gitwarp.com:8081/https://raw.githubusercontent.com/zym2013/Amazing-Luogu/refs/heads/main/index.user.js"
+            },
+            {
+                name: "GitHub Raw Mirror 6",
+                versionUrl: "https://proxy.gitwarp.com/https://raw.githubusercontent.com/zym2013/Amazing-Luogu/refs/heads/main/versions.json",
+                downloadUrl: "https://proxy.gitwarp.com/https://raw.githubusercontent.com/zym2013/Amazing-Luogu/refs/heads/main/index.user.js"
+            },
+            {
+                name: "GitHub Raw Mirror 7",
+                versionUrl: "http://jp1-proxy.gitwarp.com:8123/https://raw.githubusercontent.com/zym2013/Amazing-Luogu/refs/heads/main/versions.json",
+                downloadUrl: "http://jp1-proxy.gitwarp.com:8123/https://raw.githubusercontent.com/zym2013/Amazing-Luogu/refs/heads/main/index.user.js"
+            },
+            {
+                name: "GitHub Raw Mirror 8",
+                versionUrl: "http://gh.halonice.com/https://raw.githubusercontent.com/zym2013/Amazing-Luogu/refs/heads/main/versions.json",
+                downloadUrl: "http://gh.halonice.com/https://raw.githubusercontent.com/zym2013/Amazing-Luogu/refs/heads/main/index.user.js"
+            },
+            {
+                name: "GitHub Raw Mirror 9",
+                versionUrl: "http://hk-yd-proxy.gitwarp.com:6699/https://raw.githubusercontent.com/zym2013/Amazing-Luogu/refs/heads/main/versions.json",
+                downloadUrl: "http://hk-yd-proxy.gitwarp.com:6699/https://raw.githubusercontent.com/zym2013/Amazing-Luogu/refs/heads/main/index.user.js"
+            },
+            {
+                name: "jsDmirror",
+                versionUrl: "https://cdn.jsdmirror.com/gh/zym2013/Amazing-Luogu@refs/heads/main/versions.json",
+                downloadUrl: "https://cdn.jsdmirror.com/gh/zym2013/Amazing-Luogu@refs/heads/main/index.user.js"
+            },
+            {
+                name: "jsDelivr",
+                versionUrl: "https://cdn.jsdelivr.net/gh/zym2013/Amazing-Luogu@refs/heads/main/versions.json",
+                downloadUrl: "https://cdn.jsdelivr.net/gh/zym2013/Amazing-Luogu@refs/heads/main/index.user.js"
+            },
+            {
+                name: "Github Raw",
+                versionUrl: "https://raw.githubusercontent.com/zym2013/Amazing-Luogu/refs/heads/main/versions.json",
+                downloadUrl: "https://raw.githubusercontent.com/zym2013/Amazing-Luogu/refs/heads/main/index.user.js"
+            }
+        ];
+        const logEl = document.getElementById("log");
+        const resultEl = document.getElementById("result");
+        const resultCard = document.getElementById("resultCard");
+        const progressFill = document.getElementById("progressFill");
+        const progressText = document.getElementById("progressText");
+        const statsEl = document.getElementById("stats");
+        function compareVersions(v1, v2) {
+            const a = v1.split(".").map(Number);
+            const b = v2.split(".").map(Number);
+            for (let i = 0; i < Math.max(a.length, b.length); i++) {
+                const numA = i < a.length ? a[i] : 0;
+                const numB = i < b.length ? b[i] : 0;
+                if (numA > numB) return 1;
+                if (numA < numB) return -1;
+            }
+            return 0;
+        }
+        function updateProgress(current, total) {
+            const percentage = Math.round((current / total) * 100);
+            progressFill.style.width = `${percentage}%`;
+            progressText.textContent = `${percentage}% (${current}/${total})`;
+            if (current === total) {
+                setTimeout(() => {
+                    resultCard.style.display = 'block';
+                    resultCard.style.animation = 'fadeInUp 0.8s ease';
+                    resultCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 500);
+            }
+        }
+        function log(source, version, duration, error = null) {
+            const sourceItem = document.createElement("div");
+            sourceItem.className = `source-item ${error ? 'error' : 'success'}`;
+            const index = logEl.children.length;
+            sourceItem.style.animationDelay = `${index * 0.1}s`;
+            const iconClass = error ? 'fas fa-times-circle' : 'fas fa-check-circle';
+            const iconColorClass = error ? 'error' : 'success';
+            sourceItem.innerHTML = `
+        <div class="source-icon ${iconColorClass}">
+          <i class="${iconClass}"></i>
+        </div>
+        <div class="source-info">
+          <div class="source-name">${source}</div>
+          <div class="source-status ${error ? 'error' : 'success'}">
+            ${error ? `❌ ${error}` : `✅ 版本 v${version}`}
+          </div>
+        </div>
+        <div class="source-duration">${duration.toFixed(1)} ms</div>
+      `;
+            logEl.appendChild(sourceItem);
+            sourceItem.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+        function createStats(successCount, totalCount, avgDuration) {
+            statsEl.style.display = 'flex';
+            statsEl.innerHTML = `
+        <div class="stat-box">
+          <div class="stat-icon" style="color: var(--success-color);">
+            <i class="fas fa-check-circle"></i>
+          </div>
+          <div class="stat-value success">${successCount}</div>
+          <div class="stat-label">成功检测源</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-icon" style="color: var(--danger-color);">
+            <i class="fas fa-times-circle"></i>
+          </div>
+          <div class="stat-value error">${totalCount - successCount}</div>
+          <div class="stat-label">失败检测源</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-icon" style="color: var(--primary-color);">
+            <i class="fas fa-bolt"></i>
+          </div>
+          <div class="stat-value" style="color: var(--primary-color);">${avgDuration.toFixed(1)}</div>
+          <div class="stat-label">平均响应时间 (ms)</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-icon" style="color: var(--secondary-color);">
+            <i class="fas fa-percentage"></i>
+          </div>
+          <div class="stat-value" style="color: var(--secondary-color);">${Math.round((successCount / totalCount) * 100)}%</div>
+          <div class="stat-label">检测成功率</div>
+        </div>
+      `;
+        }
+        async function checkVersions() {
+            const results = [];
+            let completed = 0;
+            updateProgress(0, sources.length);
+            const promises = sources.map(async (source, index) => {
+                const start = performance.now();
+                try {
+                    const controller = new AbortController();
+                    const timeoutId = setTimeout(() => controller.abort(), 3000);
+                    const res = await fetch(source.versionUrl, {
+                        mode: "cors",
+                        signal: controller.signal
+                    });
+                    clearTimeout(timeoutId);
+                    const duration = performance.now() - start;
+                    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+                    const json = await res.json();
+                    const version = json["Amazing Luogu"]?.release || json["Amazing Luogu"]?.dev;
+                    if (!version) throw new Error("未找到版本字段");
+                    log(source.name, version, duration);
+                    completed++;
+                    updateProgress(completed, sources.length);
+                    return {
+                        source: source.name,
+                        version,
+                        downloadUrl: source.downloadUrl,
+                        duration,
+                        error: null
+                    };
+                } catch (err) {
+                    const duration = performance.now() - start;
+                    const errorMsg = err.name === 'AbortError' ? '请求超时' : err.message || "获取失败";
+                    log(source.name, null, duration, errorMsg);
+                    completed++;
+                    updateProgress(completed, sources.length);
+                    return {
+                        source: source.name,
+                        version: null,
+                        downloadUrl: null,
+                        duration,
+                        error: errorMsg
+                    };
+                }
+            });
+            const allResults = await Promise.all(promises);
+            const validResults = allResults.filter(r => r.version);
+            const totalDuration = allResults.reduce((sum, r) => sum + r.duration, 0);
+            const avgDuration = totalDuration / allResults.length;
+            createStats(validResults.length, allResults.length, avgDuration);
+            validResults.sort((a, b) => {
+                const cmp = compareVersions(b.version, a.version);
+                if (cmp !== 0) return cmp;
+                return a.duration - b.duration;
+            });
+            if (validResults.length === 0) {
+                resultEl.innerHTML = `
+          <div class="result-card">
+            <div class="version-badge" style="background: linear-gradient(135deg, var(--danger-color), var(--warning-color));">
+              <i class="fas fa-exclamation-triangle"></i> 检测失败
+            </div>
+            <p style="color: var(--danger-color); font-size: 1.2rem; margin: 20px 0;">
+              <i class="fas fa-times-circle"></i> 无任何源返回有效版本！
+            </p>
+            <p>请检查网络连接或稍后再试。</p>
+            <button onclick="location.reload()" style="
+              background: var(--primary-color);
+              color: white;
+              border: none;
+              padding: 12px 24px;
+              border-radius: 50px;
+              font-size: 1rem;
+              cursor: pointer;
+              margin-top: 20px;
+              display: inline-flex;
+              align-items: center;
+            ">
+              <i class="fas fa-redo-alt" style="margin-right: 8px;"></i> 重新检测
+            </button>
+          </div>
+        `;
+                return;
+            }
+            const best = validResults[0];
+            const latestVersion = best.version;
+            const latestSources = validResults.filter(r => r.version === latestVersion);
+            latestSources.sort((a, b) => a.duration - b.duration);
+            const fastestLatest = latestSources[0];
+            resultEl.innerHTML = `
+        <div class="result-card">
+          <h3 style="color: var(--text-secondary); margin-bottom: 10px;">检测到最新版本</h3>
+          <div class="version-badge">v${latestVersion}</div>
+          <div class="fastest-source">
+            <div class="fastest-source-header">
+              <i class="fas fa-bolt"></i>
+              <h4>推荐安装源（最快响应）</h4>
+            </div>
+            <p style="margin-bottom: 10px;"><strong>${fastestLatest.source}</strong></p>
+            <p style="color: var(--success-color); font-weight: 500;">
+              <i class="fas fa-tachometer-alt"></i> 响应时间: ${fastestLatest.duration.toFixed(1)} ms
+            </p>
+          </div>
+          <a href="${fastestLatest.downloadUrl}" target="_blank" class="download-btn">
+            <i class="fas fa-download"></i> 安装最新版 (v${latestVersion})
+          </a>
+          <details class="details">
+            <summary>
+              <i class="fas fa-chevron-right"></i>
+              查看所有提供 v${latestVersion} 的源 (${latestSources.length}个)
+            </summary>
+            <div class="details-content">
+              <p style="margin-bottom: 15px; color: var(--text-secondary);">
+                以下源均提供最新版本 v${latestVersion}，按响应速度排序：
+              </p>
+              <pre>${JSON.stringify(latestSources.map(s => ({
+                源名称: s.source,
+                响应时间: `${s.duration.toFixed(1)}ms`,
+                下载地址: s.downloadUrl
+            })), null, 2)}</pre>
+            </div>
+          </details>
+        </div>
+      `;
+            const reloadBtn = document.createElement('div');
+            reloadBtn.style.textAlign = 'center';
+            reloadBtn.style.marginTop = '30px';
+            reloadBtn.innerHTML = `
+        <button onclick="location.reload()" style="
+          background: transparent;
+          color: var(--primary-color);
+          border: 2px solid var(--primary-color);
+          padding: 12px 24px;
+          border-radius: 50px;
+          font-size: 1rem;
+          cursor: pointer;
+          display: inline-flex;
+          align-items: center;
+          transition: var(--transition);
+        ">
+          <i class="fas fa-redo-alt" style="margin-right: 8px;"></i> 重新检测所有源
+        </button>
+      `;
+            reloadBtn.querySelector('button').addEventListener('mouseover', function () {
+                this.style.background = 'var(--primary-color)';
+                this.style.color = 'white';
+            });
+            reloadBtn.querySelector('button').addEventListener('mouseout', function () {
+                this.style.background = 'transparent';
+                this.style.color = 'var(--primary-color)';
+            });
+            resultEl.appendChild(reloadBtn);
+        }
+        document.addEventListener('DOMContentLoaded', function () {
+            setTimeout(() => {
+                progressFill.style.animation = 'progress 2s ease';
+            }, 300);
+            checkVersions().catch(err => {
+                console.error(err);
+                logEl.innerHTML += `<div class="source-item error">
+          <div class="source-icon error">
+            <i class="fas fa-exclamation-triangle"></i>
+          </div>
+          <div class="source-info">
+            <div class="source-name">检测系统</div>
+            <div class="source-status error">💥 检测失败：${err.message}</div>
+          </div>
+        </div>`;
+                resultCard.style.display = 'block';
+                resultCard.style.animation = 'fadeInUp 0.8s ease';
+                resultEl.innerHTML = `
+          <div class="result-card">
+            <div class="version-badge" style="background: linear-gradient(135deg, var(--danger-color), var(--warning-color));">
+              <i class="fas fa-bug"></i> 系统错误
+            </div>
+            <p style="color: var(--danger-color); font-size: 1.2rem; margin: 20px 0;">
+              检测过程中发生错误
+            </p>
+            <p>${err.message}</p>
+            <button onclick="location.reload()" style="
+              background: var(--primary-color);
+              color: white;
+              border: none;
+              padding: 12px 24px;
+              border-radius: 50px;
+              font-size: 1rem;
+              cursor: pointer;
+              margin-top: 20px;
+            ">
+              <i class="fas fa-redo-alt"></i> 重新尝试
+            </button>
+          </div>
+        `;
+            });
+        });
+    </script>
+</body>
+
+</html>
