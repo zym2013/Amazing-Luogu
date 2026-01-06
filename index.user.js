@@ -38,7 +38,8 @@
 // @grant        GM_getResourceText
 // @grant        GM_cookie
 // @grant        GM_listValues
-// @license      CC-BY-NC-ND-4.0
+// @license      CC-BY-NC-ND-4.0\
+// @require      https://cdn.jsdmirror.com/npm/sweetalert2@11.26.17/dist/sweetalert2.min.js
 // @require      https://cdn.jsdmirror.com/gh/highlightjs/cdn-release/build/highlight.min.js
 // @require      https://cdn.jsdmirror.com/npm/marked@4.0.0/marked.min.js
 // @require      https://cdn.jsdmirror.com/npm/dompurify@3.3.1/dist/purify.min.js
@@ -46,12 +47,12 @@
 // @require      https://cdn.jsdmirror.com/npm/katex@0.16.27/dist/contrib/auto-render.min.js
 // @require      https://cdn.jsdmirror.com/npm/@fortawesome/fontawesome-free@7.1.0/js/all.min.js
 // @require      https://cdn.jsdmirror.com/npm/jquery@3.7.1/dist/jquery.min.js
-// @require      https://cdn.jsdmirror.com/npm/sweetalert2@11.26.17
 // @require      https://cdn.jsdmirror.com/npm/izitoast@1.4.0/dist/js/iziToast.min.js
 // @require      https://cdn.jsdmirror.com/npm/clipboard@2.0.11/dist/clipboard.min.js
 // @resource     iziToastCSS https://cdn.jsdmirror.com/npm/izitoast@1.4.0/dist/css/iziToast.min.css
 // @resource     icomoonCSS https://cdn.jsdmirror.com/gh/marcelodolza/iziToast@master/docs/css/icomoon.css
 // @resource     hljs https://cdn.jsdmirror.com/gh/highlightjs/cdn-release/build/styles/github.min.css
+// @resource     swal https://cdn.jsdmirror.com/npm/sweetalert2@11.26.17/dist/sweetalert2.min.css
 // @run-at       document-end
 // ==/UserScript==
 
