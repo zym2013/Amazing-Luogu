@@ -39,7 +39,6 @@
 // @grant        GM_getResourceText
 // @grant        GM_cookie
 // @grant        GM_listValues
-// @grant        unsafeWindow
 // @license      CC-BY-NC-ND-4.0
 // @require      https://cdn.jsdmirror.com/npm/sweetalert2@11.26.17/dist/sweetalert2.min.js
 // @require      https://cdn.jsdmirror.com/gh/highlightjs/cdn-release/build/highlight.min.js
